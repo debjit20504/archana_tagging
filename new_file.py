@@ -5,17 +5,17 @@ with open("ingredients.csv", "r", encoding = "utf8") as file:
 	lst = list(reader)
 	l1 = []
 	l2 = []
-	for i in range(0,83000,500):
+	for i in range(0,83000,1000):
 		l2.append(i)
 	temp = 0
 	set_value = temp
 	temp_value = 0
 	count = 0
-	while(temp<82500):
-		for i in range(0,82501):
+	while(temp<82000):
+		for i in range(0,82001):
 			# print(lst[i])
 			l1.append(lst[i])
-			if i % 500 == 0 and i != 0:
+			if i % 1000 == 0 and i != 0:
 				temp_value = i
 				count += 1
 			if i==temp_value:

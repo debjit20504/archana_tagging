@@ -1,25 +1,24 @@
 import csv
-with open("ingredients.csv", "r", encoding = "utf8") as file:
+with open("archana_remaining.csv", "r", encoding = "utf8") as file:
 	reader = csv.reader(file)
 	ing_list = []
 	lst = list(reader)
 	l1 = []
 	l2 = []
-	for i in range(0,83000,1000):
+	for i in range(0,18000,1000):
 		l2.append(i)
 	temp = 0
 	set_value = temp
 	temp_value = 0
 	count = 0
-	while(temp<82000):
-		for i in range(0,82001):
-			# print(lst[i])
+	while(temp<18000):
+		for i in range(0,18000):
 			l1.append(lst[i])
 			if i % 1000 == 0 and i != 0:
 				temp_value = i
 				count += 1
 			if i==temp_value:
-				file1 = open('archana_'+str(l2[count-1]+1)+'-'+str(temp+1)+'.csv', 'w+', newline ='', encoding = "utf8")	
+				file1 = open('archana_remaining_'+str(l2[count-1]+1)+'-'+str(temp+1)+'.csv', 'w+', newline ='', encoding = "utf8")	
 				with file1:
 					write = csv.writer(file1)
 					write.writerows(l1)

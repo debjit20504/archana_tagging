@@ -11,23 +11,23 @@ with open("archana_remaining.csv", "r", encoding = "utf8") as file:
 	set_value = temp
 	temp_value = 0
 	count = 0
-	while(temp<18000):
-		for i in range(0,18000):
+	while(temp<18221):
+		for i in range(18002,18221):
 			l1.append(lst[i])
-			if i % 1000 == 0 and i != 0:
-				temp_value = i
-				count += 1
-			if i==temp_value:
-				file1 = open('archana_remaining_'+str(l2[count-1]+1)+'-'+str(temp+1)+'.csv', 'w+', newline ='', encoding = "utf8")	
-				with file1:
-					write = csv.writer(file1)
-					write.writerows(l1)
-				l1 = []
-			temp+=1
-	# file1 = open('archana_'+str(set_value+1)+'-'+str(temp)+'.csv', 'w+', newline ='', encoding = "utf8")	
-	# with file1:
-	# 	write = csv.writer(file1)
-	# 	write.writerows(l1)
+			# if i % 1000 == 0 and i != 0:
+				# temp_value = i
+				# count += 1
+			# if i==temp_value:
+			# 	file1 = open('archana_remaining_'+str(l2[count-1]+1)+'-'+str(temp+1)+'.csv', 'w+', newline ='', encoding = "utf8")	
+			# 	with file1:
+			# 		write = csv.writer(file1)
+			# 		write.writerows(l1)
+			# 	l1 = []
+			# temp+=1
+			file1 = open('archana_remaining_18002-18221.csv', 'w+', newline ='', encoding = "utf8")	
+			with file1:
+				write = csv.writer(file1)
+				write.writerows(l1)
 
 
 # with open("archana_1-100.csv", 'r', encoding = 'utf8') as file:
